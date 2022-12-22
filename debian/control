@@ -1,0 +1,36 @@
+Source: node-traverse
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: David Paleino <dapal@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-traverse
+Vcs-Git: https://salsa.debian.org/js-team/node-traverse.git
+Homepage: https://github.com/substack/js-traverse
+Rules-Requires-Root: no
+
+Package: node-traverse
+Architecture: all
+Depends:
+ ${misc:Depends}
+Provides: ${nodejs:Provides}
+Multi-Arch: foreign
+Description: recursively traverse objects in Node.js
+ node-traverse is a Node.js module that lets you Traverse and transform
+ objects by visiting every node on a recursive walk.
+
+Package: libjs-traverse
+Architecture: all
+Depends:
+ ${misc:Depends}
+Recommends:
+ javascript-common
+Multi-Arch: foreign
+Description: recursively traverse objects in Javascript
+ node-traverse is a Node.js module that lets you Traverse and transform
+ objects by visiting every node on a recursive walk.
+ .
+ This package contains the browser-version of node-traverse.
